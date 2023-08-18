@@ -29,23 +29,23 @@ let ratings = [
     }
 ]
 let selectedId = 0
+/** @desc saves a single rating on an array in memory @param id of the person being rated @param desc string description of the rating @param rate a number from 0 to 5 */
 function saveRating(id,desc,rate) {
-    for(let i=0;i<ratings.length;i++){
-        if(ratings[i].id==id){
-            ratings.push({
-                id:id,
-                desc:desc,
-                ratedId:rate
-            })
-        }
-    }
+    let person = rated.find((r)=>{r.id==id})
+    person.rating = ((person.rating+(parseInt(rate)))/2)
+    ratings.push({
+        id:id,
+        desc:desc,
+        ratedId:rate
+    })
+
 }
 
 let search =document.getElementById('txtsearch') 
-
+/** Add event istener to take the search input and process */
 search.addEventListener('keypress',((ev)=>{
     console.log(ev);
-    if(ev.key == 13){
+    if(ev.key == "Enter"){
         console.log(rated);
         for(let i=0;i<rated.length;i++){
             console.log(rated);
@@ -57,8 +57,13 @@ search.addEventListener('keypress',((ev)=>{
         }
     }
 }))
+/** Adding an event when the submit button is clicked to save the ratings */
 
-document.getElementById('form').addEventListener('submit',((eve)=>{
-    saveRating(selectedId,document.getElementById('desc').value,0)
-    console.log(ratings);
+document.getElementById('submit').addEventListener('click',((eve)=>{
+    let hasRated = false
+    if(hasRated == false){
+        saveRating(selectedId,document.getElementById('desc').value,0)
+        console.log(ratings);
+        hasRated = true
+    }
 }))

@@ -9,16 +9,18 @@
 <body>
     <div class="wrapper">
         <main>
-            <form action="" method="post" id="form"> 
+            <!-- Container of the form  -->
+            <div class="form">
                 <header class="header"><h3>Rating</h3></header>
                 <input type="text" id="txtsearch" placeholder="search" >
                 <img src="./person1.png" class="profile" alt="">
-                <label for="" name="name" id="name"></label>
-                <label for="" name="name" id="lblrating"></label>
+                <label for="" name="name" ><h4 id="name"></h4></label>
+                <label for="" name="name" ><h4 id="lblrating"></h4></label>
                 <input type="number" max="5" min="0" name="number" id="rating">
                 <textarea name="desc" id="desc" cols="30" rows="5" placeholder="Description..."> </textarea>
-                <button type="submit" class="btn">Submit</button>
-            </form>
+                <button type="submit" id="submit" class="btn">Submit</button>
+            </div>
+            
             
         </main>
     </div>

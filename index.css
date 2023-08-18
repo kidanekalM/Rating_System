@@ -1,3 +1,4 @@
+/* Setting the common styles for all the html elements using `*` selector*/
 *{
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -17,12 +18,12 @@ h3{
 
 
 }
-form{
+.form{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     background-color: white;
     padding: 2rem;
     border-radius: 25px;
@@ -45,6 +46,7 @@ textarea{
     border-radius: 25px;
     max-width: 15rem;
     box-shadow: 0 0 3px 1px grey;
+    padding: .5rem;
 }
 .btn{
     border: 0;
